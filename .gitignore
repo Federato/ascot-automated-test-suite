@@ -221,3 +221,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Credentials
+.env
+
+# Virtual environment
+.venv/
+
+# Selenium browser profile (session cookies)
+.chrome-profile/
+
+# Python / pytest caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Debug screenshots
+*.png
+
+# macOS / editor files
+.DS_Store
+.vscode/
