@@ -62,19 +62,6 @@ To run every test in the repo:
 pytest -s
 ```
 
-## Logging in with SSO
-
-The login page offers username/password and Azure AD SSO. The test fills in the username/password form, so it needs an account on that connection. If your account only works through SSO, automated login will not work. Options:
-
-1. Ask your admin for a dedicated test user with username/password login.
-2. Log in manually once and reuse the session by adding this line to the `driver` fixture in the test file, then log in by hand in the window that opens on the first run:
-
-   ```python
-   opts.add_argument("--user-data-dir=/absolute/path/to/.chrome-profile")
-   ```
-
-   The test skips the login form whenever the browser is already signed in. `.chrome-profile/` is gitignored.
-
 ## Test data
 
 - Each run creates a **real account and submission** in `ascotus-dev` named `Selenium Test Co <timestamp>`. These are not cleaned up automatically.
