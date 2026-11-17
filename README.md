@@ -26,7 +26,6 @@ cd ascot-automated-test-suite
 python3 -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
-pip install -r requirements.txt
 ```
 
 Create your credentials file:
