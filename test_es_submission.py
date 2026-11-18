@@ -2,7 +2,7 @@
 import os
 import pytest
 import sys
-from dotenv import load_dotenv
+from dotenv import load_dotenv, set_key
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -195,3 +195,6 @@ def test_create_es_submission(driver, wait):
     driver.execute_script("arguments[0].click()", link)
 
     assert_account_details(driver, wait, name)
+
+    # Save account name to env file so can use to run other tests
+    set_key(".env", "ACCOUNT_NAME", name)
